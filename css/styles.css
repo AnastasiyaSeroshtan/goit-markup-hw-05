@@ -13,6 +13,7 @@
   --bg-images-lianer-gradient: rgba(47, 48, 58, 0.4);
   --bg-activity-section: rgba(47, 48, 58, 0.8);
   --bg-cards-portfolio: rgba(33, 150, 243, 0.9);
+  --bg-bd-modal: rgba(0, 0, 0, 0.2);
   --button-hover-color: #188ce8;
   --border-img-color: #eeeeee;
   --footer-contact-link-color: #ffffff99;
@@ -654,3 +655,55 @@ img {
   color: var(--secondary-text-color);
 }
 /*============ END PORTFOLIO============*/
+
+/*============ START MODAL============*/
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-bd-modal);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: scale(1.1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  background: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+}
+
+/*============ END MODAL============*/
