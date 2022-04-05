@@ -623,7 +623,6 @@ img {
   color: var(--light-text-color);
   background-color: var(--bg-cards-portfolio);
   padding: 63px 24px;
-  overflow: auto;
   transform: translateY(100%);
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
